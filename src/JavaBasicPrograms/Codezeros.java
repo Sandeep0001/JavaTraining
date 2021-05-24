@@ -2,6 +2,7 @@ package JavaBasicPrograms;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Stack;
 
 public class Codezeros {
 
@@ -15,6 +16,8 @@ public class Codezeros {
 
     public static void main(String[] args) {
 
+        //1. Implementation using ArrayList()
+
         int j;
         ArrayList<String> list = new ArrayList<String>(Arrays.asList("a","b","-","e","d","-","o","w","-"));
 
@@ -23,16 +26,32 @@ public class Codezeros {
 
 
         for(int i=0; i< list.size();i++){
-            list1.add(list.get(i));
             if(list.get(i) == "-") {
                 j = list1.size() - 1 ;
                 list1.remove(j);
-                list1.remove(j-1);
+            }else{
+                list1.add(list.get(i));
             }
         }
 
         System.out.println(list1); //[a, e, o]
 
+
+
+        //2. Implementaion using stack
+
+        Stack<String> stk = new Stack<>();
+
+        for(int i=0; i< list.size();i++){
+
+            if(list.get(i) == "-"){
+                stk.pop();
+            }else{
+                stk.push(list.get(i));
+            }
+        }
+
+        System.out.println(stk);
 
     }
 
