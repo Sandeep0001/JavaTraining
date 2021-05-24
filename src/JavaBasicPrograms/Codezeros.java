@@ -38,7 +38,7 @@ public class Codezeros {
 
 
 
-        //2. Implementaion using stack
+        //2. Implementation using stack
 
         Stack<String> stk = new Stack<>();
 
