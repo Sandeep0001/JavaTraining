@@ -20,10 +20,10 @@ class Main  //if we declare public class then we get error to define class outsi
 {
     public static void main(String[] args)
     {
-        for (int i=0; i<=3; i++)
+        /*for (int i=0; i<=3; i++)
         {
             MTClass object = new MTClass();
             object.start();
-        }
+        }*/
     }
 }
