@@ -1,4 +1,4 @@
-package JavaBasicPrograms;
+package JavaBasicPrograms.puzzles;
 
 public class TestCode {
 
