@@ -26,14 +26,14 @@ public class TestCar {
 		Car c1 = new BMW();/*child class object can be referred by parent class reference variable 
 							-- dynamic polymorphism -- Run-time polymorphism*/
 		/*Dynamic polymorphism: Same method is overridden with same signature in different classes*/
-		c1.start();
+		c1.start(); //BMW Start
 		c1.stop();
 		c1.refuel();
 		//c1.theftSafety();//cannot be accessed by parent class
 		
 		//Down Casting -- BMW b1
 		//BMW b1 = new Car();//its not allowed to down cast directly
-		//BWM b1 = (BMW)new Car();//ClassCastException
+		//BMW b1 = (BMW)new Car();//ClassCastException
 	}
 
 }
