@@ -1,5 +1,7 @@
 package JavaBasicPrograms;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.*;
 
 public class ReplaceDuplicateCharInString {
@@ -12,18 +14,21 @@ public class ReplaceDuplicateCharInString {
         char c[] = "Sandeeep".toCharArray();
 
 
-        List<Character> list1 = new ArrayList<>();
+        List<Character> list = new ArrayList<>();
 
         for (char c2 : c) {
 
-            if (list1.contains(c2)) {
-                list1.add('$');
+            if (list.contains(c2)) {
+                list.add('$');
             } else {
-                list1.add(c2);
+                list.add(c2);
             }
         }
 
-        System.out.println(list1.toString());
+        String delim = "";
+        String res = StringUtils.join(list, delim);
+
+        System.out.println(res); //Sande$$p
 
     }
 }
