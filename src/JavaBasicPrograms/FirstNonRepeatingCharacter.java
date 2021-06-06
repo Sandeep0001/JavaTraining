@@ -1,6 +1,7 @@
 package JavaBasicPrograms;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class FirstNonRepeatingCharacter {
@@ -13,6 +14,21 @@ public class FirstNonRepeatingCharacter {
         System.out.println(c); //f
 
 
+    }
+
+    //Using stream
+    public static char firstNonRepeatingCharUsingStrems(String s){
+
+        Map<Character, Long> map = s.chars().mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+        for (Map.Entry<Character, Long> entry: map.entrySet()){
+            if (entry.getValue() == 1){
+                return entry.getKey();
+            }
+        }
+        System.out.print("Could not find any dup chars in a given string");
+        return (char) 0;
     }
 
 
