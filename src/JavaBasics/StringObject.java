@@ -18,9 +18,9 @@ public class StringObject {
         String n1 = new String("Hello world");
         String n2 = new String("Hello world"); //Three objects will be created
 
-        System.out.println(s1==s2); //true
-        System.out.println(s2==s3); //true
-        System.out.println(s1==s3); //true
+        System.out.println(s1==s2); //false
+        System.out.println(s2==s3); //false
+        System.out.println(s1==s3); //false
 
         System.out.println(n1==n2); //false
         System.out.println(s1==n1); //false
