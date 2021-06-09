@@ -6,6 +6,7 @@ import java.util.List;
 
 public class DialPadCombinations {
 
+    //WAP to find phone dial pad combinations
     public static void findCombinations(List<List<Character>> keypad, int[] input)
     {
         // list to store combinations of all possible words
