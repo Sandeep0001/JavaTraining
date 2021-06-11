@@ -11,7 +11,7 @@ public class PrintPowerOfValue {
         if(b>0) {
             return a * pow(a, b - 1);
         }else{
-            double d = 1.0 / (double)a * pow(a, b+1);
+            double d = 1.0 / a * pow(a, b+1);
             return d;
         }
 
