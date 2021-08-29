@@ -42,13 +42,23 @@ public class Codezeros {
 
         Stack<String> stk = new Stack<>();
 
-        for(int i=0; i< list.size();i++){
+        /*for(int i=0; i< list.size();i++){
 
             if(list.get(i) == "-"){
                 stk.pop();
             }else{
                 stk.push(list.get(i));
             }
+        }*/
+
+        for(String s : list){
+
+            if (s == "-"){
+                stk.pop();
+            }else{
+                stk.push(s);
+            }
+
         }
 
         System.out.println(stk);
