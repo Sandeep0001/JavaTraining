@@ -1,6 +1,5 @@
 package JavaBasicPrograms.Patterns;
 
-import sun.misc.FloatingDecimal;
 
 public class AlphabetPattern {
 
