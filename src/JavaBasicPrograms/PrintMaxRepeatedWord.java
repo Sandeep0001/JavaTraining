@@ -19,6 +19,7 @@ public class PrintMaxRepeatedWord {
 
         Collections.sort(list, (l1, l2) -> l1.getValue().compareTo(l2.getValue()));
 
+
         System.out.println(list.get(list.size()-1));
 
 
