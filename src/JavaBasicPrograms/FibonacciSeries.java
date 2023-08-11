@@ -14,8 +14,6 @@ public class FibonacciSeries {
 			int sum = i + j;
 			i = j;
 			j = sum;
-			
-			
 		}
 	}
 }

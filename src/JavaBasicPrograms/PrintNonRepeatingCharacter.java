@@ -10,7 +10,6 @@ public class PrintNonRepeatingCharacter {
     //"abbccc" -> a
 
     public static void nonRepeatingChar(String str){
-
         Map<Character, Integer> map = new HashMap<>();
 
         Map<Character, Long> counter = str.chars()
@@ -22,14 +21,10 @@ public class PrintNonRepeatingCharacter {
             if (entry.getValue() == 1){
                 System.out.print(entry.getKey());
             }
-
         }
     }
 
     public static void main(String[] args) {
-
         nonRepeatingChar("abccddeeffrrrrrr"); //ab
-
     }
-
 }
