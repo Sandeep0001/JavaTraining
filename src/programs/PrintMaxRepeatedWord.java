@@ -32,7 +32,7 @@ public class PrintMaxRepeatedWord {
     }
 
     public static void  printMaxWordUsingStreamsAndCollections(String str){
-        Map<String, Long> map = Arrays.asList(str.replaceAll("\\.|\\,*", "").toLowerCase().split(" ")).stream()
+        Map<String, Long> map = Arrays.stream(str.replaceAll("\\.|,*", "").toLowerCase().split(" "))
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
         System.out.println(map.entrySet().stream().filter(e -> Objects.equals(e.getValue(), Collections.max(map.values()))).map(Map.Entry::getKey).collect(Collectors.toList()));
