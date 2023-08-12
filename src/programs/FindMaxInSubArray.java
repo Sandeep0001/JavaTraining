@@ -1,6 +1,7 @@
 package programs;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -14,7 +15,24 @@ public class FindMaxInSubArray {
         System.out.println("Hello, World");
         int[] arr = {2, 5, 10, 2, 3, 25, 90, 2};
         printMaxNumInSubArray(arr, 3);
+        printMaxFromSubArray(arr, 3);
         printMaxOfSubArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}, 3);
+    }
+
+    public static void printMaxFromSubArray(int[] arr, int subArray) {
+        List<Integer> intList = new ArrayList<>();
+        int head = 0;
+
+        for (int i : arr) {
+            intList.add(i);
+        }
+
+        while (subArray <= intList.size()) {
+            List<Integer> sublist = intList.subList(head, subArray);
+            System.out.println(Collections.max(sublist));
+            head++;
+            subArray++;
+        }
     }
 
     //Brute force
