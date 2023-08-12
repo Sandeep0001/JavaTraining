@@ -31,8 +31,16 @@ public class PrintMaxRepeatedWord {
         System.out.println(map.entrySet().stream().filter(e -> e.getValue() == max.getAsInt()).map(Map.Entry::getKey).collect(Collectors.toList()));
     }
 
+    public static void  printMaxWordUsingStreamsAndCollections(String str){
+        Map<String, Long> map = Arrays.asList(str.replaceAll("\\.|\\,*", "").toLowerCase().split(" ")).stream()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+        System.out.println(map.entrySet().stream().filter(e -> e.getValue() == Collections.max(map.values())).map(Map.Entry::getKey).collect(Collectors.toList()));
+    }
+
     public static void main(String[] args) {
         printMaxWord("Hello Java, Hello C#");
-        printMaxWordUsingStreams("Hello Java, Hello C#, Java");
+        printMaxWordUsingStreams("Hello Java, Hello C#, Java"); //[Java, Hello]
+        printMaxWordUsingStreamsAndCollections("Hello Java, hello C#, Java"); //[java, hello]
     }
 }
