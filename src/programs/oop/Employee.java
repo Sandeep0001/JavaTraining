@@ -1,4 +1,4 @@
-package programs.OOP;
+package programs.oop;
 
 import java.util.Objects;
 

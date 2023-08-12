@@ -1,4 +1,4 @@
-package programs.OOP;
+package programs.oop;
 
 public class Student {
 

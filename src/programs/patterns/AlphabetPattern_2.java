@@ -1,4 +1,4 @@
-package programs.Patterns;
+package programs.patterns;
 
 public class AlphabetPattern_2 {
 
