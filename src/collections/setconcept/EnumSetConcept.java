@@ -1,4 +1,4 @@
-package collections.SetConcept;
+package collections.setconcept;
 
 import java.util.EnumSet;
 import java.util.Iterator;

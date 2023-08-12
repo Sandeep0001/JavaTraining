@@ -1,4 +1,4 @@
-package collections.SetConcept;
+package collections.setconcept;
 
 import java.util.Arrays;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package collections.LinkedListConcept;
+package collections.linkedlistconcept;
 
 public class MyLinkedList {
 
