@@ -17,7 +17,7 @@ public class HashMapInitialization {
         marksMap.put("B", 200);
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //1. using HashMap class
 
         HashMap<String, String> map1 = new HashMap<>();
@@ -26,17 +26,17 @@ public class HashMapInitialization {
         //2. static way: static HasMap
         System.out.println(HashMapInitialization.marksMap.get("A")); //100
 
-        //3. immutableMap with on;y single entry
-        Map<String ,Integer> map3 = Collections.singletonMap("test", 100);
+        //3. immutableMap with only single entry
+        Map<String, Integer> map3 = Collections.singletonMap("test", 100);
         System.out.println(map3.get("test"));
         //map3.put("ABC", 200);  //output error: java.lang.UnsupportedOperationException
 
         //4. JDK 8:
         //creating one 2D array of Strings using Stream and collecting in the form of Map
-        Map<String ,String> map4 = Stream.of(new String[][]{
+        Map<String, String> map4 = Stream.of(new String[][]{
                 {"Tom", "A grade"},
                 {"Jerry", "B grade"},
-        }).collect(Collectors.toMap(data ->data[0], data -> data[1]));
+        }).collect(Collectors.toMap(data -> data[0], data -> data[1]));
         System.out.println(map4.get("Tom"));
 
         map4.put("Lisa", "A++ grade");
@@ -45,7 +45,7 @@ public class HashMapInitialization {
         //5.Using SimpleEntry:  mutable map
         Map<String, String> map5 = Stream.of(new AbstractMap.SimpleEntry<>("Naveen", "Java"),
                 new AbstractMap.SimpleEntry<>("Tom", "Python")
-                ).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+        ).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
         System.out.println(map5.get("Naveen"));  //Java
 
         map5.put("Sandeep", "C#");
@@ -96,6 +96,4 @@ public class HashMapInitialization {
 //        System.out.println(titleMaps.get("Rediff")); //UnsupportedOperationException
 
     }
-
-
 }

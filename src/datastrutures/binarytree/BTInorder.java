@@ -2,20 +2,7 @@ package datastrutures.binarytree;
 
 public class BTInorder {
 
-    //used to create the Tree node
-    public static class TreeNode{
-        int data;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int data){
-            this.data = data;
-        }
-
-    }
-
-
-    public static TreeNode createBinaryTree(){
+    public static TreeNode createBinaryTree() {
 
         TreeNode rootNode = new TreeNode(40);
 
@@ -38,17 +25,6 @@ public class BTInorder {
         return rootNode;
     }
 
-    public void inOrderTraversal(TreeNode root){
-
-        if (root!=null){
-            inOrderTraversal(root.left);
-
-            System.out.print(root.data + " "); //10 20 30 40 50 60 70
-
-            inOrderTraversal(root.right);
-        }
-    }
-
     public static void main(String[] args) {
 
         BTInorder obj = new BTInorder();
@@ -58,5 +34,25 @@ public class BTInorder {
 
     }
 
+    public void inOrderTraversal(TreeNode root) {
 
+        if (root != null) {
+            inOrderTraversal(root.left);
+
+            System.out.print(root.data + " "); //10 20 30 40 50 60 70
+
+            inOrderTraversal(root.right);
+        }
+    }
+
+    //used to create the Tree node
+    public static class TreeNode {
+        int data;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int data) {
+            this.data = data;
+        }
+    }
 }

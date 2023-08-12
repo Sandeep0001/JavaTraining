@@ -2,19 +2,7 @@ package datastrutures.binarytree;
 
 public class BTPostOrder {
 
-    //used to create tree node
-    public static class TreeNode{
-
-        int data;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int data){
-            this.data = data;
-        }
-    }
-
-    public static TreeNode createBinaryTree(){
+    public static TreeNode createBinaryTree() {
         TreeNode rootNode = new TreeNode(40);
 
         TreeNode node20 = new TreeNode(20);
@@ -37,17 +25,6 @@ public class BTPostOrder {
 
     }
 
-    //creating postOrderTraversal:
-    public void postOrderTraversal(TreeNode root){
-        if (root != null){
-            postOrderTraversal(root.left);
-            postOrderTraversal(root.right);
-            System.out.print(root.data + " "); //10 30 20 50 70 60 40
-        }
-
-    }
-
-
     public static void main(String[] args) {
 
         BTPostOrder obj = new BTPostOrder();
@@ -56,5 +33,27 @@ public class BTPostOrder {
 
         obj.postOrderTraversal(rootNode);
 
+    }
+
+    //creating postOrderTraversal:
+    public void postOrderTraversal(TreeNode root) {
+        if (root != null) {
+            postOrderTraversal(root.left);
+            postOrderTraversal(root.right);
+            System.out.print(root.data + " "); //10 30 20 50 70 60 40
+        }
+
+    }
+
+    //used to create tree node
+    public static class TreeNode {
+
+        int data;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int data) {
+            this.data = data;
+        }
     }
 }

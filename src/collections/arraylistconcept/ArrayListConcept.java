@@ -6,7 +6,7 @@ import java.util.Iterator;
 
 public class ArrayListConcept {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         //default class available in Java
         //dynamic array
@@ -49,14 +49,14 @@ public class ArrayListConcept {
         stdList.add("Shiva");
 
         //1. for loop
-        for(int i=0;i<stdList.size();i++){
+        for (int i = 0; i < stdList.size(); i++) {
             System.out.println(stdList.get(i));
         }
 
         System.out.println("Using Foreach loop");
 
         //2. foreach
-        for(String s : stdList){
+        for (String s : stdList) {
             System.out.println(s);
         }
 
@@ -70,19 +70,16 @@ public class ArrayListConcept {
         //4. iterator
         Iterator<String> it = stdList.iterator();
 
-        while (it.hasNext()){
+        while (it.hasNext()) {
             System.out.println(it.next());
         }
 
         //List with other collection:
 
-        ArrayList<Integer> numbers = new ArrayList<Integer>(Arrays.asList(10, 20,30,40));
+        ArrayList<Integer> numbers = new ArrayList<Integer>(Arrays.asList(10, 20, 30, 40));
         System.out.println(numbers);
 
         ArrayList<String> langs = new ArrayList<String>(Arrays.asList("Java", "python", "CS"));
         System.out.println(langs);
-
-
     }
-
 }

@@ -8,9 +8,9 @@ import java.util.stream.Collectors;
 
 public class RemoveDuplicateElementsFromArrayList {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        ArrayList<Integer> numbers = new ArrayList<Integer>(Arrays.asList(1,2,2,3,3,4,5,3,2,5,7,8));
+        ArrayList<Integer> numbers = new ArrayList<Integer>(Arrays.asList(1, 2, 2, 3, 3, 4, 5, 3, 2, 5, 7, 8));
 
         //1. LinkedHashSet
 
@@ -21,10 +21,9 @@ public class RemoveDuplicateElementsFromArrayList {
 
         //2. JDK 8 --- Stream:
 
-        ArrayList<Integer> marks = new ArrayList<Integer>(Arrays.asList(1,2,2,5,5,3,6,8,4,22,2,5,1));
+        ArrayList<Integer> marks = new ArrayList<Integer>(Arrays.asList(1, 2, 2, 5, 5, 3, 6, 8, 4, 22, 2, 5, 1));
         List<Integer> marksListUnique = marks.stream().distinct().collect(Collectors.toList());
 
         System.out.println(marksListUnique);
     }
-
 }

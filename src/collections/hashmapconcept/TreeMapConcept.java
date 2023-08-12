@@ -6,7 +6,7 @@ import java.util.TreeMap;
 
 public class TreeMapConcept {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         TreeMap<Integer, String> map = new TreeMap<>();
 
@@ -18,7 +18,7 @@ public class TreeMapConcept {
 
         System.out.println(map); //{2000=Jerry, 3000=Shiva, 10000=Tom, 11000=Sandeep, 14000=Naveen}
 
-        map.forEach((k,v) -> System.out.println("Key = " + k + "Values = " + v));
+        map.forEach((k, v) -> System.out.println("Key = " + k + "Values = " + v));
         /*Key = 2000Values = Jerry
             Key = 3000Values = Shiva
             Key = 10000Values = Tom
@@ -35,14 +35,14 @@ public class TreeMapConcept {
         System.out.println(keyGreaterThan3k); //[3000, 10000, 11000, 14000]
 
 
-        TreeMap<String, Integer>  userMap = new TreeMap<>();
+        TreeMap<String, Integer> userMap = new TreeMap<>();
         userMap.put("Sandeep", 100);
         userMap.put("Anu", 120);
         userMap.put("Ganesha", 10);
         userMap.put("Rama", 18);
         userMap.put("Balu", 1000);
 
-        userMap.forEach((k,v) -> System.out.println("Key = " + k + " Values = " + v));
+        userMap.forEach((k, v) -> System.out.println("Key = " + k + " Values = " + v));
         /*Key = Anu Values = 120
                 Key = Balu Values = 1000
                 Key = Ganesha Values = 10
@@ -60,15 +60,12 @@ public class TreeMapConcept {
         map1.put(11000, "Sandeep");
         map1.put(14000, "Naveen");
 
-        map1.forEach((k,v) -> System.out.println("Keys = " + k + " Values = " + v));
+        map1.forEach((k, v) -> System.out.println("Keys = " + k + " Values = " + v));
         /*
         Keys = 14000 Values = Naveen
         Keys = 11000 Values = Sandeep
         Keys = 10000 Values = Tom
         Keys = 3000 Values = Shiva
         Keys = 2000 Values = Jerry*/
-
-
     }
-
 }

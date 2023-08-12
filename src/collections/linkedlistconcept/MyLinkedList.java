@@ -4,27 +4,7 @@ public class MyLinkedList {
 
     Node head;
 
-    class Node{
-        int data;
-        Node next;
-
-        Node(int data){
-            this.data = data;
-            next = null;
-        }
-    }
-
-
-    public void printMyLinkedList(){
-        Node n =head;
-        while(n!=null){
-            System.out.println(n.data);
-            n = n.next;
-        }
-    }
-
-
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         MyLinkedList ll = new MyLinkedList();
 
@@ -38,11 +18,23 @@ public class MyLinkedList {
         second.next = third;
 
         ll.printMyLinkedList();
-
-
-
-
-
     }
 
+    public void printMyLinkedList() {
+        Node n = head;
+        while (n != null) {
+            System.out.println(n.data);
+            n = n.next;
+        }
+    }
+
+    class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            next = null;
+        }
+    }
 }

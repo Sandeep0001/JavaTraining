@@ -69,8 +69,5 @@ public class HashSetConcept {
         diff.removeAll(second);
 
         System.out.println(diff); //[2, 5, 7]
-
-
     }
-
 }

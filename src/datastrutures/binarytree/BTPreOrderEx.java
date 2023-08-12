@@ -2,21 +2,7 @@ package datastrutures.binarytree;
 
 public class BTPreOrderEx {
 
-
-    //used to create the Tree node
-    public static class TreeNode{
-        int data;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int data){
-            this.data = data;
-        }
-
-    }
-
-
-    public static TreeNode createBinaryTree(){
+    public static TreeNode createBinaryTree() {
 
         TreeNode rootNode = new TreeNode(40);
 
@@ -39,18 +25,6 @@ public class BTPreOrderEx {
         return rootNode;
     }
 
-    //pre order - recursive  solution
-    public void preorderTraverse(TreeNode root){
-
-        if(root != null){
-            System.out.print(root.data + " "); //40 20 10 30 60 50 70
-
-            preorderTraverse(root.left);
-            preorderTraverse(root.right);
-        }
-
-    }
-
     public static void main(String[] args) {
 
         BTPreOrderEx bt = new BTPreOrderEx();
@@ -61,4 +35,26 @@ public class BTPreOrderEx {
 
     }
 
+    //pre order - recursive  solution
+    public void preorderTraverse(TreeNode root) {
+
+        if (root != null) {
+            System.out.print(root.data + " "); //40 20 10 30 60 50 70
+
+            preorderTraverse(root.left);
+            preorderTraverse(root.right);
+        }
+
+    }
+
+    //used to create the Tree node
+    public static class TreeNode {
+        int data;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int data) {
+            this.data = data;
+        }
+    }
 }

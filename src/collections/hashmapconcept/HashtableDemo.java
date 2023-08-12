@@ -4,7 +4,7 @@ import java.util.Hashtable;
 
 public class HashtableDemo {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Hashtable<String, Integer> marks = new Hashtable<>();
         marks.put("Sandeep", 99);
@@ -14,8 +14,5 @@ public class HashtableDemo {
         marks.put("Zoma", 45);
 
         System.out.println(marks.get("Sandeep")); //99
-
-
     }
-
 }

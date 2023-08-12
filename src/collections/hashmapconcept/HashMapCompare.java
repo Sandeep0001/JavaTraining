@@ -64,22 +64,12 @@ public class HashMapCompare {
         map7.put(3, "C");
         map7.put(4, "C");
 
-        //a. duplicates are not allowed :
+        //a. duplicates are allowed :
         System.out.println(new ArrayList<>(map5.values()).equals(new ArrayList<>(map6.values()))); //true
         System.out.println(new ArrayList<>(map5.values()).equals(new ArrayList<>(map7.values()))); //false
 
-        //b. duplicates are allowed: using HashSet();
+        //b. duplicates are not allowed: using HashSet();
         System.out.println(new HashSet<>(map5.values()).equals(new HashSet<>(map7.values()))); //true
         System.out.println(new HashSet<>(map5.values()).equals(new HashSet<>(map6.values()))); //true
-
-
-
-
-
-
-
-
-
     }
-
 }

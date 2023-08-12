@@ -4,38 +4,13 @@ public class StackImpUsingLinkedList {
 
     Node head;
 
-    class Node{
-        int value;
-        Node next;
+    StackImpUsingLinkedList() {
+        head = null;
     }
 
-    StackImpUsingLinkedList(){
-        head =null;
-    }
-
-    //push(): add value to the beginning of the list
-    public void push(int value){
-
-        Node extraHead = head;
-        head = new Node();
-        head.value = value;
-        head.next = extraHead;
-
-    }
-
-    public int pop(){
-        if (head == null){
-            System.out.println("Stack is empty");
-        }
-
-        int value = head.value;
-        head = head.next;
-        return value;
-    }
-
-    public static void printList(Node head){
+    public static void printList(Node head) {
         Node temp = head;
-        while (temp!=null){
+        while (temp != null) {
             System.out.println(temp.value + " ");
             temp = temp.next;
         }
@@ -65,6 +40,28 @@ public class StackImpUsingLinkedList {
 
     }
 
+    //push(): add value to the beginning of the list
+    public void push(int value) {
 
+        Node extraHead = head;
+        head = new Node();
+        head.value = value;
+        head.next = extraHead;
 
+    }
+
+    public int pop() {
+        if (head == null) {
+            System.out.println("Stack is empty");
+        }
+
+        int value = head.value;
+        head = head.next;
+        return value;
+    }
+
+    class Node {
+        int value;
+        Node next;
+    }
 }

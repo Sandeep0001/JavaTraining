@@ -12,7 +12,7 @@ public class QueueArrayImp {
     int rear;
     int currentSize;
 
-    public QueueArrayImp(int sizeOfQueue){
+    public QueueArrayImp(int sizeOfQueue) {
 
         this.capacity = sizeOfQueue;
         front = 0;
@@ -20,64 +20,6 @@ public class QueueArrayImp {
         queueArr = new int[this.capacity];
 
     }
-
-
-    //this method is used to add element in the queue
-    public void enqueue(int data){
-        if (isFull()){
-            System.out.println("hey, queue is full");
-        }
-        else {
-            rear++;
-            if(rear == capacity){
-                rear = 0;
-            }
-            queueArr[rear] = data;
-            currentSize++;
-            System.out.println(data + " added to the queue");
-        }
-
-    }
-
-
-    //this method is used to removed the element from front of the queue
-    public void dequeue(){
-        if (isEmpty()){
-            System.out.println("hey, queue is empty, cannot delete element");
-        }
-        else {
-            front++;
-            if (front == capacity){
-                System.out.println(queueArr[front-1] + " removed from the queue");
-                front = 0;
-            }else {
-                System.out.println(queueArr[front-1] + " removed from the queue");
-            }
-            currentSize--;
-        }
-    }
-
-
-
-
-    public boolean isFull(){
-        if (currentSize == capacity){
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
-    public boolean isEmpty(){
-        if (currentSize == 0){
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
 
     public static void main(String[] args) {
 
@@ -103,4 +45,51 @@ public class QueueArrayImp {
 
     }
 
+    //this method is used to add element in the queue
+    public void enqueue(int data) {
+        if (isFull()) {
+            System.out.println("hey, queue is full");
+        } else {
+            rear++;
+            if (rear == capacity) {
+                rear = 0;
+            }
+            queueArr[rear] = data;
+            currentSize++;
+            System.out.println(data + " added to the queue");
+        }
+
+    }
+
+    //this method is used to removed the element from front of the queue
+    public void dequeue() {
+        if (isEmpty()) {
+            System.out.println("hey, queue is empty, cannot delete element");
+        } else {
+            front++;
+            if (front == capacity) {
+                System.out.println(queueArr[front - 1] + " removed from the queue");
+                front = 0;
+            } else {
+                System.out.println(queueArr[front - 1] + " removed from the queue");
+            }
+            currentSize--;
+        }
+    }
+
+    public boolean isFull() {
+        if (currentSize == capacity) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean isEmpty() {
+        if (currentSize == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

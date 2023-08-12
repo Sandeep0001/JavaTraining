@@ -42,6 +42,9 @@ public class HashMapToArrayList {
                                         30000*/
         }
 
+        long max = Collections.max(compMap.values());
+        System.out.println("Max value in a map is:" + max); //5000
+
         compMap.forEach((k, v) -> System.out.println("Key = " + k + " Values = " + v));
         /*
         Key = Google Values = 10000
@@ -52,5 +55,4 @@ public class HashMapToArrayList {
         * */
 
     }
-
 }

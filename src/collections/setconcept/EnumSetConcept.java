@@ -69,24 +69,5 @@ public class EnumSetConcept {
         boolean b1 = newLang.removeAll(newLang);
         System.out.println(b1);//true
         System.out.println(newLang);//[]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
 }

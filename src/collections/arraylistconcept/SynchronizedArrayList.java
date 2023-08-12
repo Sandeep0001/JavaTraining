@@ -9,7 +9,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class SynchronizedArrayList {
 
     //ThreadSafety concept
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         //1. Collections.synchronizedList
         List<String> namesList = Collections.synchronizedList(new ArrayList<String>());
@@ -20,9 +20,9 @@ public class SynchronizedArrayList {
         //add, remove --> we dont need explicit synchronization
         //to fetch/traverse the values from this list we have to use explicit synchronization
 
-        synchronized (namesList){
+        synchronized (namesList) {
             Iterator<String> it = namesList.iterator();
-            while(it.hasNext()){
+            while (it.hasNext()) {
                 System.out.println(it.next());
             }
         }
@@ -35,10 +35,9 @@ public class SynchronizedArrayList {
 
         //we dont need any explicit synchronization for any operation: add, remove or traversing
 
-        Iterator<String> it =empList.iterator();
-        while(it.hasNext()){
+        Iterator<String> it = empList.iterator();
+        while (it.hasNext()) {
             System.out.println(it.next());
         }
     }
-
 }

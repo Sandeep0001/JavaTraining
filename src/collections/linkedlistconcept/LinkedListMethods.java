@@ -104,8 +104,5 @@ public class LinkedListMethods {
         //sort:
         Collections.sort(lang);
         System.out.println(lang); //[JS, Java, Python, Ruby]
-
-
     }
-
 }

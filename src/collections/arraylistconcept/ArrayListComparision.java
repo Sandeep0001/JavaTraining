@@ -6,7 +6,7 @@ import java.util.Collections;
 
 public class ArrayListComparision {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         //1. Sort then equals:
 
@@ -43,10 +43,5 @@ public class ArrayListComparision {
 
         lang1.retainAll(lang2);
         System.out.println(lang1); //[Java, Python, Ruby]
-
-
-
-
     }
-
 }

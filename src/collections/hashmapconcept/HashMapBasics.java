@@ -40,8 +40,6 @@ public class HashMapBasics {
             System.out.println("Key=" + key +  " Value = " + value);
         }
 
-
-
         //iterator: over the set (pair) : by using entrySet
 
         Iterator<Map.Entry<String, String>> it1 = capitalMap.entrySet().iterator();
@@ -53,14 +51,5 @@ public class HashMapBasics {
         //iterator: hashmap using java 8 for each and lambda
 
         capitalMap.forEach((k,v) -> System.out.println("Key = " + k + " Value = " + v));
-
-
-
-
-
-
-
-
     }
-
 }
