@@ -14,7 +14,7 @@ public class MaxSubstringLengthWithoutProhibitedWords {
         int inputArrayLength = inputArray.length;
         String maxSubstring = inputArray[0];
 
-        while (i<inputArrayLength && j<inputArrayLength){
+        while (j<inputArrayLength){
             if (!isProhibited(maxSubstring, prohibitedWords)){
                 lengthMap.put(maxSubstring, maxSubstring.length());
                 j += 1;
@@ -33,7 +33,7 @@ public class MaxSubstringLengthWithoutProhibitedWords {
 
     public static boolean isProhibited(String word, String[] prohibitedWords){
         for (String prohibited : prohibitedWords){
-            if (word.toLowerCase().contains(prohibited)){
+            if (word.toLowerCase().contains(prohibited.toLowerCase())){
                 return true;
             }
         }
@@ -43,5 +43,4 @@ public class MaxSubstringLengthWithoutProhibitedWords {
     public static void main(String[] args){
         printMaxLengthOfSubstringWithoutProhibitedWords("FastDeliveryOkayProduct", new String[]{"yo", "eli", "eryok"});
     }
-
 }

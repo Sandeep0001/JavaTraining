@@ -12,11 +12,10 @@ public class FindMaxInSubArray {
       {10, 10, 10 ,25,90,90}*/
 
     public static void main(String[] args) {
-        System.out.println("Hello, World");
         int[] arr = {2, 5, 10, 2, 3, 25, 90, 2};
-        printMaxNumInSubArray(arr, 3);
-        printMaxFromSubArray(arr, 3);
-        printMaxOfSubArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}, 3);
+        printMaxNumInSubArray(arr, 3); //10 10 10 25 90 90
+        printMaxFromSubArray(arr, 3); //10 10 10 25 90 90
+        printMaxOfSubArray(new int[]{1, 12, 3, 4, 89, 6, 7, 3, 0}, 3);
     }
 
     public static void printMaxFromSubArray(int[] arr, int subArray) {
@@ -29,10 +28,11 @@ public class FindMaxInSubArray {
 
         while (subArray <= intList.size()) {
             List<Integer> sublist = intList.subList(head, subArray);
-            System.out.println(Collections.max(sublist));
+            System.out.print(Collections.max(sublist) + " ");
             head++;
             subArray++;
         }
+        System.out.println();
     }
 
     //Brute force
@@ -50,8 +50,9 @@ public class FindMaxInSubArray {
                     temp = arr[j];
                 }
             }
-            System.out.println(temp);
+            System.out.print(temp+" ");
         }
+        System.out.println();
     }
 
     //using collections
