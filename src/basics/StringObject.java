@@ -21,6 +21,7 @@ public class StringObject {
         System.out.println(s1==s2); //false
         System.out.println(s2==s3); //false
         System.out.println(s1==s3); //false
+        System.out.println(s4==s3); //true
 
         System.out.println(n1==n2); //false
         System.out.println(s1==n1); //false

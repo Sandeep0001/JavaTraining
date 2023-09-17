@@ -23,7 +23,7 @@ public class HashMapInitialization {
         HashMap<String, String> map1 = new HashMap<>();
         Map<String, String> map2 = new HashMap<>(); //TopCasting
 
-        //2. static way: static HasMap
+        //2. static way: static HashMap
         System.out.println(HashMapInitialization.marksMap.get("A")); //100
 
         //3. immutableMap with only single entry

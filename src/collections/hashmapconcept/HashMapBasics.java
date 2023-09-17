@@ -10,7 +10,7 @@ public class HashMapBasics {
 
         //1. No ordering -- i.e it doesn't store elements in order
         //2. No indexing
-        //3. Stores the value in key - va;ues format
+        //3. Stores the value in key - values format
         //4. Key should be unique --> if we use duplicate key then latest key value will be considered
         //5. Can store n number of null values but only one null key
         //6. HashMap is not thread safe / synchronized

@@ -35,6 +35,5 @@ public class CallByValueAndCallByReference {
 		temp = t.p;//temp = 50
 		t.p = t.q;//t.p = 60
 		t.q = temp;// t.q = 50
-				
 	}
 }

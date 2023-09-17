@@ -10,28 +10,28 @@ public class IncrementDecrementalOperator {
         int i = 1;
         int j = i++;//post increment
 
-        System.out.println(i);
-        System.out.println(j);
+        System.out.println(i); //2
+        System.out.println(j); //1
 
         System.out.println("pre increment");
         int a = 1;
         int b = ++a;//pre increment
 
-        System.out.println(a);
-        System.out.println(b);
+        System.out.println(a); //2
+        System.out.println(b); //2
 
         System.out.println("post decrement");
         int m = 2;
         int n = m--;//post decrement
 
-        System.out.println(m);
-        System.out.println(n);
+        System.out.println(m); //1
+        System.out.println(n); //2
 
         System.out.println("pre decrement");
         int p = 2;
         int q = --p;
 
-        System.out.println(p);
-        System.out.println(q);
+        System.out.println(p); //1
+        System.out.println(q); //1
     }
 }
