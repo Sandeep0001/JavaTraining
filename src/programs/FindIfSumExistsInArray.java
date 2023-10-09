@@ -16,6 +16,6 @@ public class FindIfSumExistsInArray {
     }
 
     public static void main(String[] args){
-        System.out.println(hasSum(new int[]{2,3,4,5,6,7,8,9}, 16));
+        System.out.println(hasSum(new int[]{2,3,4,5,6,7,8,9}, 16)); //true
     }
 }
