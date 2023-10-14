@@ -1,4 +1,4 @@
-package programs;
+package programs.arrays;
 
 import java.util.*;
 import java.util.function.Function;

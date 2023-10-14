@@ -1,4 +1,4 @@
-package programs;
+package programs.arrays;
 
 import com.google.common.collect.ObjectArrays;
 import com.google.common.primitives.Ints;

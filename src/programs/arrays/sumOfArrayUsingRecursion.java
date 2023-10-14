@@ -1,4 +1,4 @@
-package programs;
+package programs.arrays;
 
 public class sumOfArrayUsingRecursion {
 

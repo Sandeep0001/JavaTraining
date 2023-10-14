@@ -1,4 +1,4 @@
-package programs;
+package programs.arrays;
 
 import com.google.common.math.DoubleMath;
 
